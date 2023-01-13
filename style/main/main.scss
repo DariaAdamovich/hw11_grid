@@ -11,28 +11,35 @@
     background-color: rgb(182, 151, 95);
     padding: 60px 30px 30px 30px;
     display: grid;
+    
     .content__items {
       display: grid;
-      column-gap: 30px;
-      row-gap: 15px;
-      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      grid-template-rows: 80px 80px;
       align-content: end;
+      row-gap: 15px;
+      .content__item_small {
+        display: grid;
+        column-gap: 30px;
+        grid-template-columns: minmax(100px, auto) minmax(100px, auto);
+        .content__item {
+          background-color: orange;
+          /*height: 80px;*/
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      .content__item_big {
+        background-color: orange;
+        /*height: 80px;*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
-    .content__item {
-      background-color: orange;
-      height: 80px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .content__item_big {
-      grid-column: span 2;
-      background-color: orange;
-      height: 80px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+    
+    
+   
   }
   .content p {
     text-align: center;
