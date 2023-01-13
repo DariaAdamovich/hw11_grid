@@ -1,0 +1,47 @@
+@import "../vars/vars.scss";
+
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 400px;
+  grid-auto-flow: row;
+  .content {
+    grid-column: 1/2;
+    background-color: rgb(182, 151, 95);
+    padding: 60px 30px 30px 30px;
+    display: grid;
+    .content__items {
+      display: grid;
+      column-gap: 30px;
+      row-gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      align-content: end;
+    }
+    .content__item {
+      background-color: orange;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .content__item_big {
+      grid-column: span 2;
+      background-color: orange;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .content p {
+    text-align: center;
+  }
+  .aside {
+    grid-column: 2/3;
+    background-color: rgb(120, 186, 120);
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+  }
+}

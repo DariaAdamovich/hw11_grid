@@ -1,0 +1,17 @@
+@import "../vars/vars.scss";
+
+.footer {
+  grid-area: footer;
+  background-color: gray;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  padding: 30px;
+  column-gap: 45px;
+  .footer__item {
+    background-color: rgb(198, 197, 197);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
